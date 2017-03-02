@@ -64,3 +64,6 @@ Check_mk<br />
 * Away Status is used to see if anyone is in the building, located in [nest_structure](/source/checkman/nest_structure)
 * In production [datasource_programs_nest.py](/source/web/plugins/wato/datasource_programs_nest.py) is merged into datasource_programs.py
 * In production [check_parameters_nest.py](/source/web/plugins/wato/check_parameters_nest.py) is merged into check_parameters.py
+
+## TODO
+* Hosttype maken voor sensors
