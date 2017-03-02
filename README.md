@@ -22,39 +22,38 @@ If you change the permissions of the product, you will have to repeat the steps 
 
 ## Structure
 Below is a copy of the files and the nessary explanation within
-```
+
 Check_mk
-    |-- agents
-        |-- special
-            |-- [agent_nest](/source/agents/special/agent_nest)
-    |-- checkman
-        |-- [nest_co](/source/checkman/nest_co)
-        |-- [nest_humidity](/source/checkman/nest_humidity)
-        |-- [nest_smoke](/source/checkman/nest_smoke)
-        |-- [nest_smoke_co_alarm](/source/checkman/nest_smoke_co_alarm)
-        |-- [nest_structure](/source/checkman/nest_structure)
-        |-- [nest_temp](/source/checkman/nest_temp)
-        |-- [nest_thermostat](/source/checkman/nest_thermostat)
-    |-- checks
-        |-- [nest_co](/source/checks/nest_co)
-        |-- [nest_humidity](/source/checks/nest_humidity)
-        |-- [nest_smoke](/source/checks/nest_smoke)
-        |-- [nest_smoke_co_alarm](/source/checks/nest_smoke_co_alarm)
-        |-- [nest_structure](/source/checks/nest_structure)
-        |-- [nest_temp](/source/checks/nest_temp)
-        |-- [nest_thermostat](/source/checks/nest_thermostat)
-    |-- pnp-templates
-        |-- [check_mk-nest.php](/source/pnp-templates/check_mk-nest.php)
-        |-- [check_mk-nest_humidity.php](/source/pnp-templates/check_mk-nest_humidity.php)
-        |-- [check_mk-nest_smoke.php](/source/pnp-templates/check_mk-nest_smoke.php)
-        |-- [check_mk-nest_smoke_co_alarm.php](/source/pnp-templates/check_mk-nest_smoke_co_alarm.php)
-        |-- [check_mk-nest_temp.php](/source/pnp-templates/check_mk-nest_temp.php)
-        |-- [check_mk-nest_thermostat.php](/source/pnp-templates/check_mk-nest_thermostat.php)
-    |-- web
-        |-- plugins
-            |-- perfometer
-                |-- [nest_thermostat.py](/source/web/plugins/perfometer/check_mk.py)
-            |-- wato
-                |-- [check_parameters_nest.py](/source/web/plugins/wato/check_parameters.py)
-                |-- [datasource_programs_nest.py](/source/web/plugins/wato/datasource_programs.py)
-```
+|   +-- agents
+|       +-- special
+|            +-- [agent_nest](/source/agents/special/agent_nest)
+|   +-- checkman
+|       +-- [nest_co](/source/checkman/nest_co)
+|       +-- [nest_humidity](/source/checkman/nest_humidity)
+|       +-- [nest_smoke](/source/checkman/nest_smoke)
+|       +-- [nest_smoke_co_alarm](/source/checkman/nest_smoke_co_alarm)
+|       +-- [nest_structure](/source/checkman/nest_structure)
+|       +-- [nest_temp](/source/checkman/nest_temp)
+|       +-- [nest_thermostat](/source/checkman/nest_thermostat)
+|   +-- checks
+|       +-- [nest_co](/source/checks/nest_co)
+|       +-- [nest_humidity](/source/checks/nest_humidity)
+|       +-- [nest_smoke](/source/checks/nest_smoke)
+|       +-- [nest_smoke_co_alarm](/source/checks/nest_smoke_co_alarm)
+|       +-- [nest_structure](/source/checks/nest_structure)
+|       +-- [nest_temp](/source/checks/nest_temp)
+|       +-- [nest_thermostat](/source/checks/nest_thermostat)
+|   +-- pnp-templates
+|       +-- [check_mk-nest.php](/source/pnp-templates/check_mk-nest.php)
+|       +-- [check_mk-nest_humidity.php](/source/pnp-templates/check_mk-nest_humidity.php)
+|       +-- [check_mk-nest_smoke.php](/source/pnp-templates/check_mk-nest_smoke.php)
+|       +-- [check_mk-nest_smoke_co_alarm.php](/source/pnp-templates/check_mk-nest_smoke_co_alarm.php)
+|       +-- [check_mk-nest_temp.php](/source/pnp-templates/check_mk-nest_temp.php)
+|       +-- [check_mk-nest_thermostat.php](/source/pnp-templates/check_mk-nest_thermostat.php)
+|   +-- web
+|       +-- plugins
+|            +-- perfometer
+|                +-- [nest_thermostat.py](/source/web/plugins/perfometer/check_mk.py)
+|            +-- wato
+|                +-- [check_parameters_nest.py](/source/web/plugins/wato/check_parameters.py)
+|                +-- [datasource_programs_nest.py](/source/web/plugins/wato/datasource_programs.py)
