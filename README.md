@@ -53,7 +53,14 @@ Check_mk<br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- web<br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- plugins<br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- perfometer<br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- [nest_thermostat.py](/source/web/plugins/perfometer/check_mk.py)<br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- [check_mk.py](/source/web/plugins/perfometer/nest_thermostat.py)<br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- wato<br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- [check_parameters_nest.py](/source/web/plugins/wato/check_parameters.py)<br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- [datasource_programs_nest.py](/source/web/plugins/wato/datasource_programs.py)<br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- [check_parameters.py](/source/web/plugins/wato/check_parameters_nest.py)<br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- [datasource_programs.py](/source/web/plugins/wato/datasource_programs_nest.py)<br />
+
+## Special remarks
+* Default Temp warning and crit values are located in [nest_temp](/source/checkman/nest_temp)
+* Default Humidity warning and crit values are located in [nest_humidity](/source/checkman/nest_humidity)
+* Away Status is used to see if anyone is in the building, located in [nest_structure](/source/checkman/nest_structure)
+* In production [datasource_programs_nest.py](/source/web/plugins/wato/datasource_programs_nest.py) is merged into datasource_programs.py
+* In production [check_parameters_nest.py](/source/web/plugins/wato/check_parameters_nest.py) is merged into check_parameters.py
