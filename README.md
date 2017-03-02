@@ -20,3 +20,40 @@ The response of that command is a JSON output that we can use in a .json file
 
 If you change the permissions of the product, you will have to repeat the steps to get your access token.
 
+## Structure
+´´´
+Check_mk
+    |-- agents
+        |-- special
+            |-- agent_nest
+    |-- checkman
+        |-- nest_co
+        |-- nest_humidity
+        |-- nest_smoke
+        |-- nest_smoke_co_alarm
+        |-- nest_structure
+        |-- nest_temp
+        |-- nest_thermostat
+    |-- checks
+        |-- nest_co
+        |-- nest_humidity
+        |-- nest_smoke
+        |-- nest_smoke_co_alarm
+        |-- nest_structure
+        |-- nest_temp
+        |-- nest_thermostat
+    |-- pnp-templates
+        |-- check_mk-nest.php
+        |-- check_mk-nest_humidity.php
+        |-- check_mk-nest_smoke.php
+        |-- check_mk-nest_smoke_co_alarm.php
+        |-- check_mk-nest_temp.php
+        |-- check_mk-nest_thermostat.php
+    |-- web
+        |-- plugins
+            |-- perfometer
+                |-- nest_thermostat.py
+            |-- wato
+                |-- check_parameters_nest.py
+                |-- datasource_programs_nest.py
+´´´
