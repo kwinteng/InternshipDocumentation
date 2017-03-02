@@ -1,0 +1,24 @@
+title: Nest Structure: Country, postal code and away status
+agents: nest
+catalog: hw/enviroment
+license: GPL
+distribution: adams_consuting_github
+description:
+ This check monitors the reported away status of the Structures in Nest Thermostat
+ The {Access Token} in the Wato {Host & Services Parameters} is required
+ for the agent to query the Nest API.
+
+item:
+ The away status, postal code and country of the structures in the Nest Thermostat.
+
+perfdata:
+
+inventory:
+ One check for each registered structure is created by the inventory
+
+[parameters]
+parameters (none): No parameters are required for this check
+
+[configuration]
+nest_structure_default (none): No values are requred for this check
+

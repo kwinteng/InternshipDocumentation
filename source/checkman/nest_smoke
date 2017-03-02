@@ -1,0 +1,23 @@
+title: Nest Smoke Alarm: Status
+agents: nest
+catalog: hw/enviroment
+license: GPL
+distribution: adams_consuting_github
+description:
+ This check monitors the reported Smoke status of the Nest Smoke Alarm
+ to the central Nest service.
+ The {Access Token} in the Wato {Host & Services Parameters} is required
+ for the agent to query the Nest API.
+
+item:
+ The operational status of the Nest Smoke Alarm.
+
+inventory:
+ One check for each registered Smoke Alarm is created by the inventory
+
+[parameters]
+parameters (none): No parameters are required for this check
+
+[configuration]
+nest_smoke_default (none): No values are requred for this check
+

@@ -1,0 +1,77 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+
+#
+# (c) 2014 Adams Technology Consulting
+#          Gavin Adams <me@gavinadams.org>
+#
+
+# This is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  This file is distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# ails.  You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+# Pulls values from the <<<nest_humidity>>> section of the special agent
+# "agent_nest" in the same checks directory
+
+# Creates Smoke checks for all reported smoke_co_alarms
+
+
+def nest_smoke_parse(info):
+    smoke_co_alarms = {}
+    for line in info:
+        if line[0].startswith('[')and line[0].find("Protect") != -1:
+            name = line[0][1:-1]
+            smoke_co_alarm = {}
+            smoke_co_alarms[name] = smoke_co_alarm
+        else:
+            key, value = line
+            if key in ["smoke_alarm_state" ]:
+                value = value
+            smoke_co_alarm[key] = value
+    return smoke_co_alarms
+
+def inventory_nest_smoke(info):
+    smoke_co_alarms = nest_smoke_parse(info)
+    return [ (name, {}) for name in smoke_co_alarms ]
+
+def check_nest_smoke(item, params, info):
+    
+    # Process inventory for datasource check
+    smoke_co_alarms = nest_smoke_co_alarm_parse(info)
+    smoke_co_alarm = smoke_co_alarms[item]
+    
+    infotext = ""
+    smoke = ""
+    perfdata = ""
+
+    smoke = smoke_co_alarm["smoke_alarm_state"]
+    infotext += smoke
+    if smoke == "emergency":
+        perfdata = [ ("Smoke", 2) ]
+    if smoke == "warning":
+        perfdata = [ ("Smoke", 1) ]
+    else:
+        perfdata = [ ("Smoke", 0) ]
+
+    if smoke == "emergency":
+        return (2, "CRITICAL - Smoke detected, move to fresh air", perfdata)
+    if smoke == "warning":
+        return (1, "WARNING - Smoke detected", perfdata)
+    else:
+        return (0, "OK - Smoke status is OK", perfdata)
+
+check_info["nest_smoke"] = {
+    'check_function': check_nest_smoke,
+    'inventory_function': inventory_nest_smoke,
+    'service_description': 'Smoke %s',
+    'group': 'nest_smoke',
+    'has_perfdata': False,
+}
+

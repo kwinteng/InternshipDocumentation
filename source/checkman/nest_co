@@ -1,0 +1,23 @@
+title: Nest CO Alarm: Status
+agents: nest
+catalog: hw/enviroment
+license: GPL
+distribution: adams_consuting_github
+description:
+ This check monitors the reported CO status of the Nest CO Alarm
+ to the central Nest service.
+ The {Access Token} in the Wato {Host & Services Parameters} is required
+ for the agent to query the Nest API.
+
+item:
+ The operational status of the Nest CO Alarm.
+
+inventory:
+ One check for each registered CO Alarm is created by the inventory
+
+[parameters]
+parameters (none): No parameters are required for this check
+
+[configuration]
+nest_co_default (none): No values are requred for this check
+
