@@ -21,7 +21,7 @@ The response of that command is a JSON output that we can use in a .json file
 If you change the permissions of the product, you will have to repeat the steps to get your access token.
 
 ## Structure
-´´´
+```
 Check_mk
     |-- agents
         |-- special
@@ -56,4 +56,4 @@ Check_mk
             |-- wato
                 |-- check_parameters_nest.py
                 |-- datasource_programs_nest.py
-´´´
+```
