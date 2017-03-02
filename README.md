@@ -22,7 +22,6 @@ If you change the permissions of the product, you will have to repeat the steps 
 
 ## Structure
 Below is a copy of the files and the nessary explanation within
-```
 Check_mk
     |-- agents
         |-- special
@@ -57,4 +56,3 @@ Check_mk
             |-- wato
                 |-- [check_parameters_nest.py](/source/web/plugins/wato/check_parameters.py)
                 |-- [datasource_programs_nest.py](/source/web/plugins/wato/datasource_programs.py)
-```
