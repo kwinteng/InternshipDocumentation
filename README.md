@@ -96,7 +96,7 @@ Check_mk<br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- [rbpi_temp](/source/checks/rbpi_temp)<br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- pnp-templates<br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- [check_mk-rbpi_temp.php](/source/pnp-templates/check_mk-rbpi_temp.php)<br />
-
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- [check_mk-rbpi_smoke.php](/source/pnp-templates/check_mk-rbpi_smoke.php)<br />
 #### Client (RBPi)
 Check_mk_agent<br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- plugins<br />
