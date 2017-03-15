@@ -75,11 +75,13 @@ Check_mk<br />
 * Sensors to take in the data (temperature & humidity, smoke, motion, ..)
 
 ### Making the RBPi transmit data to the monitor
-The nest products work with OAuth 2.0 and require you to get an access token to communicate with the online API.
-#### Step 1: Give the public key from the monitor to the RBPi
 
-#### Step 2: Install the Check_mk plugin on the RBPi
+#### Step 1: Give the public key from the monitor to the RBPi to allow execution of ssh commands
 
+#### Step 2: Install the Check_mk_agent plugin on the RBPi
+
+#### Step 3: Create the plugins needed to transmit the data
+The plugins are python scripts that print out data in a specific format. These scripts will be called by the monitor to gather the needed data. [rbpi_smoke](/rbpi/check_mk_agent/plugins/rbpi_smoke.py) and [rbpi_temp](/rbpi/check_mk_agent/plugins/rbpi_temp.py)
 
 ### Structure
 Below is a copy of the files and the nessary explanation within
