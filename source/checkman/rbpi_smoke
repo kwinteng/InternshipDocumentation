@@ -1,0 +1,19 @@
+title: RBPi Smoke Alarm: Status
+catalog: hw/enviroment
+license: GPL
+distribution: adams_consuting_github
+description:
+ This check monitors the reported Smoke status of the Grove MQ2 sensor
+
+item:
+ The operational status of the RBPi Smoke Alarm.
+
+inventory:
+ One check is created by the inventory
+
+[parameters]
+parameters (none): No parameters are required for this check
+
+[configuration]
+rbpi_smoke_default (none): No values are requred for this check
+

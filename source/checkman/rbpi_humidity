@@ -1,0 +1,31 @@
+title: Rbpi Relative Humidity sensor
+agents: nest
+catalog: hw/enviroment
+license: GPL
+distribution: adams_consuting_github
+description:
+ This check monitors the reported relative humidity of the SHT31 temperature & humidity sensor
+
+item:
+ The relative humidity of the sensor 
+
+perfdata:
+ The relative humidity in %
+
+inventory:
+ One check is created by the inventory
+ 
+[parameters]
+parameters (tuple): A pair of numbers for both the low and high warning and
+ critical levels.
+
+ warning low (float): The lower relative humidity that triggers an {WARN} state
+ critical low (float): The lower relative humidity that triggers an {CRIT} state
+
+ warning high (float): The higher relative humidity that triggers an {WARN} state
+ critical high (float): The higher relative humidity that triggers an {CRIT} state
+
+
+[configuration]
+rbpi_humidity_default_levels (tuple): Default warning and critical levels
+
