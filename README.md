@@ -76,7 +76,7 @@ Check_mk<br />
 
 ### Making the RBPi transmit data to the monitor
 
-#### Step 1: Give the public key from the monitor to the RBPi to allow execution of ssh commands
+#### Step 1: Add the RBPi to the known hosts of the monitor to allow commands to be send
 
 #### Step 2: Install the Check_mk_agent plugin on the RBPi
 
