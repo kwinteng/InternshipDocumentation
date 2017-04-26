@@ -71,12 +71,17 @@ Check_mk<br />
 ## RBPi setup
 
 ### Prerequisites
-* A Raspberry Pi with Raspberian installed
+* A Raspberry Pi with Raspberian with pixel installed
 * Sensors to take in the data (temperature & humidity, smoke, motion, ..)
+### Install MySQL
+If not installed, install mysql using "sudo apt-get install mysql-server --fix-missing"
+In the default installation the root password is "raspberry"
+
 
 ### Making the RBPi transmit data to the monitor
 
-#### Step 1: Add the RBPi to the known hosts of the monitor to allow commands to be send
+#### Step 1: Add the monitorserver to the known hosts of the RBPi to allow commands to be send
+
 
 #### Step 2: Install the Check_mk_agent plugin on the RBPi
 
