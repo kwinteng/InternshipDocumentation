@@ -17,45 +17,43 @@
 # to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
 # Boston, MA 02110-1301 USA.
 
-# Pulls values from the <<<rbpi_db>>> section of the special agent
+# Pulls values from the <<<rbpi_water>>> section
 
-def rbpi_db_parse(info):
+def rbpi_water_parse(info):
     devices = {}
     name = "RBPi"
     device = {}
     devices[name] = device
     for line in info:
         key, value = line
-        if key in ["rbpiDb" ]:
+        if key in ["rbpiWater"]:
             value = str(value)			
             device[key] = value
     return devices
 
-def inventory_rbpi_db(info):
-    devices = rbpi_db_parse(info)
+def inventory_rbpi_water(info):
+    devices = rbpi_water_parse(info)
     return [ (name, {}) for name in devices ]
 
-def check_rbpi_db(item, params, info):
+def check_rbpi_water(item, params, info):
 
     # Process inventory for datasource check
-    devices = rbpi_db_parse(info)
+    devices = rbpi_water_parse(info)
     device = devices[item]
     
     infotext = ""
-    db = False
-
-    db = str(device["rbpiDb"])
+    water = device["rbpiWater"]
     
-    if db == "False":
-        return (1, "WARNING - No Database Connection")
+    if water == "False":
+        return (0, "OK - No water detected")
     else:
-        return (0, "OK - Db connection OK")
+        return (2, "CRITICAL - Water Detected")
 
-check_info["rbpi_db"] = {
-    'check_function':        check_rbpi_db,
-    'inventory_function':    inventory_rbpi_db,
-    'service_description':   'Database %s',
-    'group':                 'rbpi_db',
+check_info["rbpi_water"] = {
+    'check_function':        check_rbpi_water,
+    'inventory_function':    inventory_rbpi_water,
+    'service_description':   'Water %s',
+    'group':                 'rbpi_water',
     'has_perfdata':          False,
 }
 
